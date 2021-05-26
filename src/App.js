@@ -19,7 +19,6 @@ import { connect } from "react-redux";
 class App extends Component {
   render() {
     return (
-      <body className="bg">
         <Container>
           <Row className="rows">
             <Col sm={4} className="columns1">
@@ -46,7 +45,6 @@ class App extends Component {
             </Col>
           </Row>
         </Container>
-      </body>
     );
   }
 }
