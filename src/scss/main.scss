@@ -1,0 +1,43 @@
+$bg: rgb(255, 255, 255);
+
+.bg {
+  background: $bg;
+}
+.rows {
+  border: 2px solid rgb(13, 15, 141);
+}
+
+.columns1 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.columns2 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 100px;
+  font-weight: bolder;
+}
+
+.columns3 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.columns4 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.Profilepic {
+  border-radius: 50%;
+  width: 200px;
+  min-height: 30px;
+}

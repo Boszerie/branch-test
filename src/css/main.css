@@ -1,0 +1,35 @@
+.bg {
+  background: white; }
+
+.rows {
+  border: 2px solid #0d0f8d; }
+
+.columns1 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px; }
+
+.columns2 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 100px;
+  font-weight: bolder; }
+
+.columns3 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px; }
+
+.columns4 {
+  border: 2px solid black;
+  justify-content: center;
+  display: flex;
+  padding: 20px; }
+
+.Profilepic {
+  border-radius: 50%;
+  width: 200px;
+  min-height: 30px; }

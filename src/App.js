@@ -1,25 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Profilepic from "./img/Boss.jpg";
+
+// scss
+import "./css/main.css";
+
+// layout
+import { Container, Row, Col } from "reactstrap";
+
+// components
+import { Component } from "react";
+
+import { Button } from "reactstrap";
+
+import User from "./User";
+import { connect } from "react-redux";
+
+class App extends Component {
+  render() {
+    return (
+      <body className="bg">
+        <Container>
+          <Row className="rows">
+            <Col sm={4} className="columns1">
+              <img src={Profilepic} className="Profilepic" alt="profile" />
+            </Col>
+            <Col sm={8} className="columns2">
+              <h2>May I introduce myself</h2>
+            </Col>
+          </Row>
+          <Row className="rows">
+            <Col sm={4} className="columns3">
+              <form onSubmit={this.handleSubmit}>
+                <Button
+                  onClick={() => this.props.setName("My Nickname is Boss")}
+                  outline
+                  color="success"
+                >
+                  More
+                </Button>
+              </form>
+            </Col>
+            <Col sm className="columns4">
+              <User username={this.props.user.name} />
+            </Col>
+          </Row>
+        </Container>
+      </body>
+    );
+  }
 }
+const mapStatetoProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
 
-export default App;
+const mapDitpatchtoProps = (dispatch) => {
+  return {
+    setName: (name) => {
+      dispatch({
+        type: "setName",
+        payload: name,
+      });
+    },
+  };
+};
+export default connect(mapStatetoProps, mapDitpatchtoProps)(App);
