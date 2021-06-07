@@ -36,7 +36,7 @@ class App extends Component {
                   outline
                   color="success"
                 >
-                  Mores
+                  More
                 </Button>
               </form>
             </Col>
